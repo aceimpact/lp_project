@@ -1,0 +1,49 @@
+header {
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+// contact-area
+.contact-area {
+    text-align: center;
+    span {
+
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        border: 1px solid #000;
+        border-radius: 36px;
+        padding: 8px 20px;
+        text-decoration: none;
+        color: #000;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        p {
+            margin: initial;
+        }
+        &--free_counseling {
+            font-size: 10.5px;
+        }
+        &--arrow {
+            font-size: 16px;
+        }
+    }
+}
