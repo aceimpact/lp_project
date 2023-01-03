@@ -1,49 +1,231 @@
+@use "mixin" as m;
+
 header {
-    width: 100%;
+	width: 100%;
 }
 
-footer{
-    width: 100%;
-    text-align: center;
+footer {
+	width: 100%;
+	text-align: center;
 }
 
 main {
-    width: 100%;
+	width: 100%;
+	background-color: #fff;
 }
 
 .container {
-    margin: 0 auto;
-    font-weight: 500;
+	margin: 0 auto;
+	font-weight: 500;
+	p {
+		margin: initial;
+	}
+}
+
+// let_be_rich
+.let_be_rich {
+	width: 80%;
+	margin: 0 auto;
+	&__top {
+		display: flex;
+		&--image {
+		}
+		&--content {
+			p {
+				color: #ff8001;
+				font-weight: 600;
+				font-size: 20px;
+			}
+		}
+	}
+	h1 {
+		text-align: center;
+		font-size: 40px;
+		margin: 10px 0;
+	}
+	&__bottom {
+	}
+}
+
+// b_deli_feature
+.b_deli_feature {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 600;
+	margin-top: 36px;
+	h3 {
+		span {
+			color: #ff8001;
+		}
+	}
+	&__boxes {
+		display: flex;
+		justify-content: space-between;
+		font-size: 10.5px;
+		&--box {
+			span {
+				color: #ff8001;
+			}
+			.box_content {
+				background-color: #f1f1f2;
+				padding: 8px 16px;
+				p {
+					span {
+						font-size: 14px;
+						color: #dd2928;
+					}
+				}
+			}
+		}
+		.box_center {
+		}
+	}
+}
+
+// easy_practice
+.easy_practice {
+	background-color: #f1f1f2;
+	width: 100%;
+	margin-top: 36px;
+	padding: 15px 0;
+	&__container {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+// security_delivery
+.security_delivery {
+	h5 {
+		text-align: center;
+	}
+	&__top {
+		background-color: #f1f1f2;
+		text-align: center;
+		&--images {
+			display: flex;
+		}
+	}
+	&__center {
+	}
+	&__bottom {
+		background-color: #f1f1f2;
+		display: flex;
+	}
+}
+
+// top_pick_30
+.top_pick_30 {
+	&__left {
+		h3 {
+		}
+		p {
+			span {
+			}
+		}
+	}
+	&__right {
+	}
+}
+
+// easy_introduction
+.easy_introduction {
+	&__left {
+	}
+	&__right {
+		h3 {
+		}
+		p {
+			span {
+			}
+		}
+	}
+}
+
+// low_price_fee
+.low_price_fee {
+	&__left {
+		h3 {
+		}
+		p {
+			span {
+			}
+		}
+	}
+	&__right {
+	}
+}
+
+// first_time_side_job
+.first_time_side_job {
+	&__left {
+		&--box {
+		}
+	}
+	&__right {
+		h3 {
+		}
+	}
+}
+
+// shooting_unnecessary
+.shooting_unnecessary {
+    &__left {
+		h3 {
+		}
+		p {
+			span {
+			}
+		}
+	}
+	&__right {
+	}
+}
+
+// brand_achievement
+.brand_achievement {
+    &__left {
+	}
+	&__right {
+		h3 {
+		}
+		p {
+			span {
+			}
+		}
+	}
 }
 
 // contact-area
 .contact-area {
-    text-align: center;
-    span {
+	text-align: center;
+	span {
+	}
+	&__btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 300px;
+		border: 1px solid #000;
+		border-radius: 36px;
+		padding: 8px 20px;
+		text-decoration: none;
+		color: #000;
+		margin: 0 auto;
+		margin-top: 10px;
+		margin-bottom: 40px;
+		&--free_counseling {
+			font-size: 10.5px;
+		}
+		&--arrow {
+			font-size: 16px;
+		}
+	}
+}
 
-    }
-
-    &__btn {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 300px;
-        border: 1px solid #000;
-        border-radius: 36px;
-        padding: 8px 20px;
-        text-decoration: none;
-        color: #000;
-        margin: 0 auto;
-        margin-top: 10px;
-        margin-bottom: 40px;
-        p {
-            margin: initial;
-        }
-        &--free_counseling {
-            font-size: 10.5px;
-        }
-        &--arrow {
-            font-size: 16px;
-        }
-    }
+// sp版
+@include m.mq(sm) {
+	.container {
+	}
 }
