@@ -14,6 +14,7 @@ header {
 	margin: 0 auto;
 	.header {
 		width: 100%;
+		max-width: 1366px;
 		position: absolute;
 		top: 0;
 		display: flex;
@@ -99,6 +100,7 @@ main {
 		}
 		&--content {
 			position: relative;
+			z-index: 1;
 			span {
 				font-weight: 600;
 				letter-spacing: 4px;
@@ -122,13 +124,14 @@ main {
 			.back_str {
 				position: absolute;
 				white-space: nowrap;
-				font-size: 11em;
+				font-size: 13em;
 				font-weight: bold;
 				color: #fff;
-				bottom: -100px;
+				bottom: -105px;
 				right: -100px;
+				z-index: -1;
 				@include m.mq(sm) {
-					font-size: 6em;
+					font-size: 9em;
 					bottom: -66px;
 					right: -44px;
 				}
@@ -136,34 +139,18 @@ main {
 		}
 	}
 	&__bottom {
-		width: 80%;
+		width: 50%;
 		margin: 0 auto;
-		padding-top: 30px;
-		padding-bottom: 15px;
+		margin-top: -50px;
 		position: relative;
 		z-index: 1;
+		@include m.mq(sm) {
+			width: 300px;
+		}
 		h1 {
-			display: flex;
-			align-items: center;
-			position: absolute;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			-webkit-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			top: -5px;
-			font-size: 50px;
-			margin: 0;
-			@include m.mq(sm) {
-				font-size: 30px;
-			}
 			img {
-				width: 55px;
-				height: 55px;
-				margin-right: 5px;
-				@include m.mq(sm) {
-					width: 45px;
-					height: 45px;
-				}
+				width: 100%;
+				height: auto;
 			}
 			span {
 				color: #ff8001;
@@ -374,6 +361,7 @@ main {
 			display: flex;
 			justify-content: center;
 			margin-top: 10px;
+			margin-bottom: 10px;
 			img {
 				width: 60px;
 				height: 60px;
@@ -416,6 +404,17 @@ main {
 			line-height: 30px;
 			@include m.mq(sm) {
 				line-height: 18px;
+			}
+		}
+		.sp-none {
+			@include m.mq(sm) {
+				content: "";
+			}
+			&::after {
+				@include m.mq(sm) {
+					content: "";
+					margin-right: -0.333rem;
+				}
 			}
 		}
 	}
@@ -511,19 +510,35 @@ main {
 			&--content {
 				display: flex;
 				justify-content: center;
+				@include m.mq(sm) {
+					// position: absolute;
+					// bottom: 0;
+				}
 				img {
 					width: 30%;
 					max-width: 120px;
 					margin-right: 40px;
 					@include m.mq(sm) {
 						margin-right: 20px;
-						margin-bottom: -10px;
+						// margin-bottom: -10px;
 					}
 				}
 				p {
 					letter-spacing: 4px;
 					@include m.mq(sm) {
 						letter-spacing: 1px;
+						line-height: 18px;
+					}
+				}
+				.sp-none {
+					@include m.mq(sm) {
+						content: "";
+					}
+					&::after {
+						@include m.mq(sm) {
+							content: "";
+							margin-right: -0.333rem;
+						}
 					}
 				}
 			}
@@ -854,7 +869,7 @@ main {
 		}
 	}
 	&__contents {
-		width: 80%;
+		width: 100%;
 		margin: 0 auto;
 		p {
 			text-align: center;
@@ -922,7 +937,6 @@ main {
 			background: transparent;
 			cursor: pointer;
 			display: block;
-			margin-left: auto;
 		}
 
 		button.more::after {
